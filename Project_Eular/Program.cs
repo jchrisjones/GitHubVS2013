@@ -23,7 +23,8 @@ namespace Project_Eular
             //P11_Largest_Product_in_Grid p11 = new P11_Largest_Product_in_Grid();
             //P12_Highly_divisible_triangular_number p12 = new P12_Highly_divisible_triangular_number();
             //P13_Large_Sum p13 = new P13_Large_Sum();
-            P14_Longest_Collatz_sequence p14 = new P14_Longest_Collatz_sequence(999999);
-        }
-    }
+            //P14_Longest_Collatz_sequence p14 = new P14_Longest_Collatz_sequence(999999);
+			P15_Lattice_Paths p15 = new P15_Lattice_Paths(20);
+        } 
+    } 
 }
