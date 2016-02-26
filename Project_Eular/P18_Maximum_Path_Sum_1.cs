@@ -9,48 +9,34 @@ namespace Project_Eular
     {
         public P18_Maximum_Path_Sum_1()
         {
-            string filePath = @"C:\Users\Christopher\Documents\Visual Studio 2013\Projects\Project_Eular\Project_Eular\Resources\MaxPath1.txt";
-            string pyramidString = File.ReadAllText(filePath);
+			string filePath = Directory.GetCurrentDirectory ();
+			for(int i = 0; i <= 1; i++)
+				filePath = filePath.Substring(0, filePath.LastIndexOf("\\"));
+			filePath += "\\Resources\\MaxPath1.txt";
 
-            char[] splitTokens = { ' ', '\n', '\r' };
-            string[] splitPyramidString = pyramidString.Split(splitTokens, StringSplitOptions.RemoveEmptyEntries);
+			char[] tokens = { '\r', '\n', ' ' };
+			string[] numbers = 
+				File.ReadAllText (filePath).Split (tokens, StringSplitOptions.RemoveEmptyEntries);
 
-            int numOfRows = 0;
-            int numOfItems = splitPyramidString.Length;
-            int c = 1;
+			int rows = countRows (numbers);
+			int[][] pyramidArray = new int[rows][];
+			for (int i = 0; i < rows; i++)
+				pyramidArray [i] = new int[i + 1];
 
-            while(numOfItems > 0)
-            {                
-                numOfItems -= c;
-                c++;                
-            }
-            numOfRows = c - 1;
-                       
-            int count = 0;
-            c = 0;
-            int[,] pyramidIntArray = new int[15, 15];
-
-            
-            for(int i = 0; i < pyramidIntArray.GetLength(0); i++)
-            {
-                for(int j = 0; j < count; j++)
-                {
-                    pyramidIntArray[i, j] = Int32.Parse(splitPyramidString[count]);
-                    c++;
-                }
-                count++;
-            }
-
-            count = 0;
-            for (int i = 0; i < pyramidIntArray.GetLength(0); i++)
-            {
-                for (int j = 0; j < count; j++)
-                {
-                    Console.Write(pyramidIntArray[i, j] + " ");                    
-                }
-                Console.WriteLine();
-                count++;
-            }
+			for (int i = 0; i < pyramidArray.GetLength (0); i++) {
+				for(int j = 0; 
+			}
         }
+
+		public static int countRows(string[] numbers)
+		{
+			int numberOfRows = 0, num = numbers.Length;
+			while (num > 0) {
+				num -= numberOfRows;
+				numberOfRows++;
+			}
+
+			return numberOfRows - 1;
+		}
     }
 }
