@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinarySearchTree.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="P10_Summation_of_Primes.cs" />
     <Compile Include="P11_Largest_Product_in_Grid.cs" />
     <Compile Include="P01_sum3_5_Multiples1000.cs" />
