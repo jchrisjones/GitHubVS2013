@@ -7,9 +7,13 @@ namespace Project_Eular
 {
     public class Node
     {
-        public int value;
-        public Node parentLeft;
-        public Node parentRight;
+        public int value;       
         public List<int> pathScore;
+
+		public Node(int i)
+		{
+			value = i;
+			pathScore = new List<int> ();
+		}
     }
 }
