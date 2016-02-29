@@ -26,7 +26,8 @@ namespace Project_Eular
             //P14_Longest_Collatz_sequence p14 = new P14_Longest_Collatz_sequence(999999);
 			//P15_Lattice_Paths p15 = new P15_Lattice_Paths(20);
             //P17_Number_Letter_Counts p17 = new P17_Number_Letter_Counts();
-            P18_Maximum_Path_Sum_1 p18 = new P18_Maximum_Path_Sum_1();
+            //P18_Maximum_Path_Sum_1 p18 = new P18_Maximum_Path_Sum_1();
+            P19_Counting_Sundays p19 = new P19_Counting_Sundays();
         } 
     } 
 }

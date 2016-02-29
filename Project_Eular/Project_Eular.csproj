@@ -58,6 +58,7 @@
     <Compile Include="P13_Large_Sum.cs" />
     <Compile Include="P14_Longest_Collatz_sequence.cs" />
     <Compile Include="P18_Maximum_Path_Sum_1.cs" />
+    <Compile Include="P19_Counting_Sundays.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="P15_Lattice_Paths.cs" />

@@ -38,25 +38,26 @@ namespace Project_Eular
 		public static int calcMaxPath(int[] array, int rows)
 		{
 			int iterator = 0;
-			ushort[,] currentArray = new ushort[rows,1];
-			ushort[,] previousArray;
+            int[] maxPathArray = new int[array.Length];			
 
-			for (int i = 0; i < currentArray.GetLength(0); i++) {
-				currentArray [i,0] = (ushort)array [iterator];
+			for (int i = 0; i < rows; i++) {
+                maxPathArray[i] = array[iterator];
 				iterator++;
 			}
 
-			for (int i = rows - 1; i >= 0; i--) {
-				previousArray = currentArray;
-				currentArray = new ushort[i, currentArray.GetLength(1) * 2];
-				for(int j = 0; j <= i; j++) {
-					for (int k = 0; k < currentArray.GetLength (1); k++) {
-
-					}
-				}
+			for (int i = rows - 1; i >= 0; i--) 
+            {
+			    for(int j = 0; j < i; j++)
+                {
+                    int tempMax1 = array[iterator] + maxPathArray[iterator - (i + 1)];
+                    int tempMax2 = array[iterator] + maxPathArray[iterator - i];
+                    maxPathArray[iterator] = Math.Max(tempMax1, tempMax2);
+                    iterator++;
+                }
 			}
 
-			return -1;
+            return maxPathArray[maxPathArray.Length - 1];
+
 		}
 
 	}
