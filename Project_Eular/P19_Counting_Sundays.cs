@@ -41,8 +41,10 @@ namespace Project_Eular
             {
                 for (int j = 0; j < 12; j++)
                 {
-                    if (totalDaysOfCentury % 7 == 0)
-                        monthOfSundays++; 
+					if (totalDaysOfCentury % 7 == 6) {
+						monthOfSundays++;
+						Console.Write (totalDaysOfCentury + " ");
+					}
                     switch (j)
                     {
 
@@ -113,7 +115,9 @@ namespace Project_Eular
                     }
                     if(temp < monthOfSundays)
                     {
+						
                         Console.WriteLine(new DateTime(i, j + 1, 1).DayOfWeek + " " + new DateTime(i, j+1, 1));
+						temp = monthOfSundays;
                     }
                 }
             }
