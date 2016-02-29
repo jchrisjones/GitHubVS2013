@@ -64,6 +64,7 @@
     <Compile Include="P15_Lattice_Paths.cs" />
     <Compile Include="P16_Power_Digit_Sum.cs" />
     <Compile Include="P17_Number_Letter_Counts.cs" />
+    <Compile Include="P20_Factorial_Digit_Sum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

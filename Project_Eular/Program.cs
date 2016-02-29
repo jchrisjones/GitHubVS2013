@@ -27,7 +27,8 @@ namespace Project_Eular
 			//P15_Lattice_Paths p15 = new P15_Lattice_Paths(20);
             //P17_Number_Letter_Counts p17 = new P17_Number_Letter_Counts();
             //P18_Maximum_Path_Sum_1 p18 = new P18_Maximum_Path_Sum_1();
-            P19_Counting_Sundays p19 = new P19_Counting_Sundays();
+            //P19_Counting_Sundays p19 = new P19_Counting_Sundays();
+			P20_Factorial_Digit_Sum p20 = new P20_Factorial_Digit_Sum();
         } 
     } 
 }
