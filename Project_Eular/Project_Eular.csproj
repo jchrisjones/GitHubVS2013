@@ -65,10 +65,14 @@
     <Compile Include="P16_Power_Digit_Sum.cs" />
     <Compile Include="P17_Number_Letter_Counts.cs" />
     <Compile Include="P20_Factorial_Digit_Sum.cs" />
+    <Compile Include="p21_Amicable_Numbers.cs" />
+    <Compile Include="P22_Names_Scores.cs" />
+    <Compile Include="P23_Non_Abundant_Sums.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Resources\triangle.txt" />
+    <None Include="Resources\p022_names.txt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\MaxPath1.txt" />

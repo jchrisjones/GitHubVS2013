@@ -28,7 +28,10 @@ namespace Project_Eular
             //P17_Number_Letter_Counts p17 = new P17_Number_Letter_Counts();
             //P18_Maximum_Path_Sum_1 p18 = new P18_Maximum_Path_Sum_1();
             //P19_Counting_Sundays p19 = new P19_Counting_Sundays();
-			P20_Factorial_Digit_Sum p20 = new P20_Factorial_Digit_Sum();
+			//P20_Factorial_Digit_Sum p20 = new P20_Factorial_Digit_Sum();
+			//p21_Amicable_Numbers p21 = new p21_Amicable_Numbers();
+			//P22_Names_Scores p22 = new P22_Names_Scores();
+			P23_Non_Abundant_Sums p23 = new P23_Non_Abundant_Sums();
         } 
     } 
 }
