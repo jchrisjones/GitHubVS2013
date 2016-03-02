@@ -10,43 +10,52 @@ namespace Project_Eular
 	{
 		public P23_Non_Abundant_Sums()
 		{
-			ushort[] allNumbers = new ushort[28124];
+            int max = 20161;
+			uint[] allNumbers = new uint[max + 1];
+            int count = 0;
+            List<uint> abundant = new List<uint> ();
+            List<uint> abundantSums = new List<uint>();
+            ulong sum = 0;
+                       
 			for (int i = 0; i < allNumbers.Length; i++)
-				allNumbers [i] = (ushort)i;
+				allNumbers [i] = (uint)i;
+            
 
-			List<ushort> abundant = new List<ushort> ();
-
-			for (int i = 12; i <= 28124; i++) {
-				int count = 1;
-				for (int j = 2; j * j < i; j++) {
-					if ((((double)i / (double)j) - (i/j)) !=  0.0) {
+			for (int i = 12; i < max + 1; i++) {
+                count = 1;
+                for (int j = 2; j * j < i; j++) {
+					if (i % j == 0) {
 						count += j;
 						count += (i / j);
-					}
-					if (count > i && count < 28123) {						
-							abundant.Add ((ushort)count);
-					}
+					}					
 				}
+                if (count > i)
+                {
+                    abundant.Add((uint)i);
+                }
 			}
+            
+            foreach(uint ai in abundant)
+            {
+                foreach(uint aj in abundant)
+                {
+                    abundantSums.Add(ai + aj);                   
+                }
+            }
+            abundantSums.Sort();
 
-			Console.WriteLine ("Here");
-			Console.WriteLine (abundant.Count);
+            foreach (uint us in abundantSums)
+            {
+                if (us <= max)
+                    allNumbers[us] = 0;
 
-			for (int i = 0; i < abundant.Count; i++) {
-				for (int j = i; j < abundant.Count; j++) {
-					int temp = abundant [i] + abundant [j];
-					if (temp > 28123)
-						continue;
-					else
-						allNumbers [temp] = 0;
-				}
-
-			}
-			ulong totaling = 0;
-			for (int i = 0; i < allNumbers.Length; i++) {
-				totaling += allNumbers [i];
-			}
-			Console.WriteLine (totaling);
+            }
+            foreach (uint us in allNumbers)
+            {                
+                sum += us;
+            }
+            Console.WriteLine(sum);
+            
 		}
 	}
  
