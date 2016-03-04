@@ -23,9 +23,10 @@ namespace Project_Eular
 
 			for (int i = 12; i < max + 1; i++) {
                 count = 1;
-                for (int j = 2; j * j < i; j++) {
+                for (int j = 2; j * j <= i; j++) {
 					if (i % j == 0) {
 						count += j;
+                        if(!(j == i/j))
 						count += (i / j);
 					}					
 				}
@@ -42,6 +43,7 @@ namespace Project_Eular
                     abundantSums.Add(ai + aj);                   
                 }
             }
+            abundantSums = abundantSums.Distinct().ToList();
             abundantSums.Sort();
 
             foreach (uint us in abundantSums)
